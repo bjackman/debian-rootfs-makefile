@@ -1,3 +1,13 @@
+**[Debian now provides official "cloud images"](https://cloud.debian.org/images/cloud/)** 
+so there is really no need for this any more. There's also `virt-builder`, here's a \
+command that got me most of the way there:
+
+`virt-builder debian-10 --root-password password:password --hostname test-guest --format qcow2 --ssh-inject root`
+
+
+-------------------------------------------------------------------------------
+
+
 This is my hacky Makefile for throwing together a Debian rootfs image that's
 handy for mucking around with in VMs. There are probably proper tools for doing
 all this stuff, and some of them probably don't need root. QCOW2 images would
